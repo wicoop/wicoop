@@ -1,0 +1,28 @@
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+if [[ -r "${XDG_CONFIG_HOME:-$HOME/.config}/zi/init.zsh" ]]; then
+  source "${XDG_CONFIG_HOME:-$HOME/.config}/zi/init.zsh" && zzinit
+fi
+
+zi light-mode for OMZL::git.zsh \
+  OMZL::compfix.zsh OMZL::prompt_info_functions.zsh OMZL::spectrum.zsh \
+  OMZL::clipboard.zsh OMZL::functions.zsh OMZL::termsupport.zsh OMZL::directories.zsh \
+    atload'zstyle ":completion:*" special-dirs false' PZTM::completion
+
+zi light-mode for \
+  OMZP::sudo OMZP::encode64 atload"unalias grv g" OMZP::git OMZP::extract OMZP::colorize \
+  OMZP::ssh-agent OMZP::gpg-agent
+
+zi light-mode for \
+  z-shell/z-a-meta-plugins @annexes skip'fzy' @fuzzy skip'tig' @console-tools skip'F-Sy-H' @z-shell \
+  MichaelAquilina/zsh-you-should-use 
+setopt promptsubst
+
+# Theme oh-my-zsh - robbyrussell
+#autoload -U colors && colors
+zi wait'!' lucid for OMZT::robbyrussell
+
+zi for atload'fast-theme z-shell &> /dev/null' z-shell/F-Sy-H
+zicompinit
+

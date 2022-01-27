@@ -5,6 +5,8 @@ if [[ -r "${XDG_CONFIG_HOME:-$HOME/.config}/zi/init.zsh" ]]; then
   source "${XDG_CONFIG_HOME:-$HOME/.config}/zi/init.zsh" && zzinit
 fi
 
+setopt promptsubst
+
 zi light-mode for OMZL::git.zsh \
   OMZL::compfix.zsh OMZL::prompt_info_functions.zsh OMZL::spectrum.zsh \
   OMZL::clipboard.zsh OMZL::functions.zsh OMZL::termsupport.zsh OMZL::directories.zsh \
@@ -15,14 +17,12 @@ zi light-mode for \
   OMZP::ssh-agent OMZP::gpg-agent
 
 zi light-mode for \
-  z-shell/z-a-meta-plugins @annexes skip'fzy' @fuzzy skip'tig' @console-tools skip'F-Sy-H' @z-shell \
-  MichaelAquilina/zsh-you-should-use 
-setopt promptsubst
+  z-shell/z-a-meta-plugins @annexes skip'fzy' @fuzzy skip'tig vivid hexyl exa hyperfine' @console-tools skip'F-Sy-H' @z-shell \
+  MichaelAquilina/zsh-you-should-use birdhackor/zsh-exa-ls-plugin \
+    atload'fast-theme z-shell &> /dev/null' z-shell/F-Sy-H
 
-# Theme oh-my-zsh - robbyrussell
-#autoload -U colors && colors
-zi wait'!' lucid for OMZT::robbyrussell
+autoload -U colors && colors
+zi wait'!' lucid for OMZT::robbyrussell \
 
-zi for atload'fast-theme z-shell &> /dev/null' z-shell/F-Sy-H
 zicompinit
 

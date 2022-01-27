@@ -1,6 +1,10 @@
 [credential "https://github.com"]
-	helper = 
+	helper = cache
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	email = claws.delayer.0b@icloud.com
 	name = William Cooper
+	signingKey = 94D211EB14AC064ADD1A772BA872FAA8C4DE5B67
+[commit]
+	gpgsign = true
+

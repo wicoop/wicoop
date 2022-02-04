@@ -1,6 +1,8 @@
-# `Mr WiCoop`
+# `WiCoop`
 
- `94D2 11EB 14AC 064A DD1A  772B A872 FAA8 C4DE 5B67`
+- I am wicoop on github.
+- I am wcoop (https://keybase.io/wcoop) on keybase.
+- I have a public key whose fingerprint is 94D2 11EB 14AC 064A DD1A 772B A872 FAA8 C4DE 5B67
 
 ```json
 {
@@ -28,7 +30,3 @@
   "tag": "signature"
 }
 ```
-
-### My publicly-auditable identity:
-
-https://keybase.io/wcoop

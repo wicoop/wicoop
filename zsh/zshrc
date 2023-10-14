@@ -5,24 +5,21 @@ if [[ -r "${XDG_CONFIG_HOME:-$HOME/.config}/zi/init.zsh" ]]; then
   source "${XDG_CONFIG_HOME:-$HOME/.config}/zi/init.zsh" && zzinit
 fi
 
-setopt promptsubst
+setopt prompt_subst
 
 zi light-mode for OMZL::git.zsh \
   OMZL::compfix.zsh OMZL::prompt_info_functions.zsh OMZL::spectrum.zsh \
-  OMZL::clipboard.zsh OMZL::functions.zsh OMZL::termsupport.zsh OMZL::directories.zsh \
-    atload'zstyle ":completion:*" special-dirs false' PZTM::completion
+  OMZL::clipboard.zsh OMZL::functions.zsh OMZL::termsupport.zsh OMZL::directories.zsh
 
 zi light-mode for \
   OMZP::sudo OMZP::encode64 atload"unalias grv g" OMZP::git OMZP::extract OMZP::colorize \
   OMZP::ssh-agent OMZP::gpg-agent
 
 zi light-mode for \
-  z-shell/z-a-meta-plugins @annexes skip'fzy' @fuzzy skip'tig vivid hexyl exa hyperfine' @console-tools skip'F-Sy-H' @z-shell \
-  MichaelAquilina/zsh-you-should-use birdhackor/zsh-exa-ls-plugin \
-    atload'fast-theme z-shell &> /dev/null' z-shell/F-Sy-H
+  z-shell/z-a-meta-plugins @annexes skip'fzy' @fuzzy skip'tig vivid hexyl exa skim hyperfine' @console-tools skip'F-Sy-H' @z-shell \
+  MichaelAquilina/zsh-you-should-use zplugin/zsh-exa @zsh-users+fast
 
 autoload -U colors && colors
 zi wait'!' lucid for OMZT::robbyrussell \
 
-zicompinit
 

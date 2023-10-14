@@ -4,7 +4,7 @@
 	signingkey = BE6998D838F06326CB033064C28317A2C98BAA83
 [commit]
 	gpgsign = true
-#[credential "https://github.com"]
-#	helper = cache
-#	helper = !/usr/bin/gh auth git-credential
+[credential "https://github.com"]
+	helper = cache
+	helper = !/usr/bin/gh auth git-credential
 
